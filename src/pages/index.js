@@ -17,7 +17,9 @@ const IndexPage = () => {
         </div>
         <p align="center">WELCOME</p>
         <h4 align="center">
-          THANKS FOR STOPPING BY! WE ARE VERY EXCITED TO SHARE WHAT WE ARE WORKING ON. MERAKI WOOD DESIGNS WILL BE SELLING ON ETSY SOON! PLEASE STAY TUNED! 
+          Thanks for stopping by! We are very excited to share what we are working on.
+          <br/> Meraki Wood Designs will be selling on Etsy soon! 
+          <br/> Please Stay Tuned! 
         </h4>
         <div style={{display:'flex', flex:1, flexDirection:'row'}}>
           <Divider split={true} />

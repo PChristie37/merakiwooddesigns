@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Meraki Wood Designs`,
-    description: `PROFESSIONALISM, ARTISTRY, CRAFT`,
+    description: `Custom Wood crafts and designs for weddings, events, and special gifts.`,
     author: `Peter Christie`,
   },
   plugins: [

@@ -15,8 +15,7 @@ const useStyles = makeStyles({
       marginBottom:'15px'
     },
     media: {
-      minHeight: 350,
-      maxHeight: 400,
+        alignItems:'center'
     },
     cardActions:{
         backgroundColor:`#F4EBDE`
@@ -26,7 +25,6 @@ const useStyles = makeStyles({
   
 function Product(props) {
     const p = props.productDetails
-    const imgUrl = props.imgUrl
     const classes = useStyles();
     function register(){
         alert("You registered for " + p.sku)
@@ -34,11 +32,13 @@ function Product(props) {
     return (
         <Card className={classes.card}>
             <CardActionArea>
-                <CardMedia
+                <CardMedia 
                     className={classes.media}
-                    image={p.imgSrc}
-                    title={p.name}
-                />
+                    title={p.name}>
+                {/* <div style={{display:'flex',flex:'flex-start', justifyContent:'center', flexDirection:'row', backgroundColor:`#F4EBDE`}}> */}
+                    <img src={p.imgSrc} />
+                {/* </div> */}
+                </CardMedia>
                 <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                     {p.name}
@@ -48,9 +48,9 @@ function Product(props) {
                 </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions className={classes.cardActions}>
+            <CardActions disableSpacing={false} className={classes.cardActions}>
                 <Button size="small" onClick={register}>
-                    Add To Cart
+                    Check out on Etsy
                 </Button>
                 <Button size="small">
                     Learn More
