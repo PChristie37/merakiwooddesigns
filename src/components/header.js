@@ -5,12 +5,13 @@ import Image from "../components/shoppingCartImage"
 import SearchImage from "../components/searchImage"
 import SearchBar from "../components/searchBar"
 import useWindowSize from "../components/useWindow"
+import HamburgerMenu from "../components/hamburgerMenu"
 
 const Header = ({ siteTitle }) => {
   const [searchBarActive, toggleSBar] = useState(false)
   const wSize = useWindowSize()
-  return(
 
+  return(
   <header
     style={{
       background: `#F4EBDE`,
@@ -29,7 +30,9 @@ const Header = ({ siteTitle }) => {
         justifyContent:'flex-start',
       }}
     >
-    <div style={{flex:1, display:'flex', justifyContent:'flex-start', flexDirection:'row'}}>
+    
+    {wSize.width > 400 ? 
+      <div style={{flex:1, display:'flex', justifyContent:'flex-start', flexDirection:'row'}}>
       <p style={{ margin:0, flex:.3 }}>
         <Link
           to="/"
@@ -55,8 +58,9 @@ const Header = ({ siteTitle }) => {
         >
           SHOP
         </Link>
-      </p>
-      </div>
+      </p> </div> : <HamburgerMenu />
+    }
+
 
       {/* <div style={{flex:1, display:'flex', justifyContent:'center', flexDirection:'row'}}>
         {siteTitle}
