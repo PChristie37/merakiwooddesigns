@@ -40,7 +40,9 @@ const Header = ({ siteTitle }) => {
           style={{
             color: `black`,
             textDecoration: `none`,
-            fontSize:16
+            fontSize:16,
+            fontFamily:`'Montserrat', sans-serif, light`,
+            // boxShadow: `inset 0 -4px 0 black, inset 0 -4.5px 0 #F4EBDE`
           }}
         >
           HOME
@@ -54,6 +56,8 @@ const Header = ({ siteTitle }) => {
           style={{
             color: `black`,
             textDecoration: `none`,
+            fontFamily:`'Montserrat', sans-serif`
+
           }}
         >
           SHOP

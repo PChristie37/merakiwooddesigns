@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Divider from "../components/styledDivider"
@@ -9,7 +7,7 @@ import {StaticQuery, graphql } from "gatsby"
 
 const Shop = () => (
   <Layout>
-    <SEO title="shop" />
+    <SEO title="shop" description="Wood design craft products" />
     <div style={{display:'flex', flex:1, flexDirection:'row'}}>
       <Divider split={true} />
         <h2>Products</h2>
