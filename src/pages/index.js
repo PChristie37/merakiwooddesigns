@@ -21,10 +21,10 @@ const IndexPage = () => {
           <br/> Meraki Wood Designs will be selling on Etsy soon! 
           <br/> Please Stay Tuned! 
         </h4>
-        
-        <div style={{display:'flex', flex:1, flexDirection:'row'}}>
+
+        {/* <div style={{display:'flex', flex:1, flexDirection:'row'}}>
           <NewsForm />
-        </div>
+        </div> */}
 
         <div style={{display:'flex', flex:1, flexDirection:'row'}}>
           <Divider split={true} />

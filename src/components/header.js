@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
       }}
     >
     
-    {wSize.width > 400 ? 
+    {wSize.width > 600 ? 
       <div style={{flex:1, display:'flex', justifyContent:'flex-start', flexDirection:'row'}}>
       <p style={{ margin:0, flex:.3 }}>
         <Link
@@ -56,19 +56,14 @@ const Header = ({ siteTitle }) => {
           style={{
             color: `black`,
             textDecoration: `none`,
+            fontSize:16,
             fontFamily:`'Montserrat', sans-serif`
-
           }}
         >
           SHOP
         </Link>
       </p> </div> : <HamburgerMenu />
     }
-
-
-      {/* <div style={{flex:1, display:'flex', justifyContent:'center', flexDirection:'row'}}>
-        {siteTitle}
-      </div> */}
 
       <div style={{flex:1, display:'flex', justifyContent:'flex-end', flexDirection:'row'}}>
         <div style={{display:'flex', justifyContent:'center', flexDirection:'row', marginRight:'15px'}} >
