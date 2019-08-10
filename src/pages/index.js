@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import HomepageTreeImage from "../components/homepageTreeImage"
 import SEO from "../components/seo"
 import Divider from "../components/styledDivider"
+import NewsForm from "../components/newsForm"
 
 const IndexPage = () => {
   return (
@@ -20,6 +21,11 @@ const IndexPage = () => {
           <br/> Meraki Wood Designs will be selling on Etsy soon! 
           <br/> Please Stay Tuned! 
         </h4>
+        
+        <div style={{display:'flex', flex:1, flexDirection:'row'}}>
+          <NewsForm />
+        </div>
+
         <div style={{display:'flex', flex:1, flexDirection:'row'}}>
           <Divider split={true} />
             <h2 style={{fontFamily:`'Montserrat', sans-serif, light`}}>Featured Products</h2>
