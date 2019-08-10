@@ -7,7 +7,7 @@ import SearchBar from "../components/searchBar"
 import useWindowSize from "../components/useWindow"
 import HamburgerMenu from "../components/hamburgerMenu"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [searchBarActive, toggleSBar] = useState(false)
   const wSize = useWindowSize()
 
@@ -21,8 +21,8 @@ const Header = ({ siteTitle }) => {
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: (wSize.width * .8),
-        maxHeight: (wSize.height * .1),
+        maxWidth: wSize.width !== undefined ? (wSize.width * .8) : "80%",
+        maxHeight: wSize.height !== undefined ? (wSize.height * .1) : "5%",
         padding: `1.45rem 1.0875rem`,
         display:'flex',
         flex:1,
@@ -31,7 +31,7 @@ const Header = ({ siteTitle }) => {
       }}
     >
     
-    {wSize.width > 600 ? 
+    {wSize.width > 600 || wSize.width == undefined ? 
       <div style={{flex:1, display:'flex', justifyContent:'flex-start', flexDirection:'row'}}>
       <p style={{ margin:0, flex:.3 }}>
         <Link

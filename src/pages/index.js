@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import HomepageTreeImage from "../components/homepageTreeImage"
 import SEO from "../components/seo"
 import Divider from "../components/styledDivider"
-import NewsForm from "../components/newsForm"
+import NewsLetterButton from "../components/subscribeToNewsletterButton"
 
 const IndexPage = () => {
   return (
@@ -45,6 +45,10 @@ const IndexPage = () => {
           <Divider split={true} />
             <h2 style={{fontFamily:`'Montserrat', sans-serif, light`}}>Project Gallery</h2>
           <Divider split={true} />
+        </div>
+
+        <div style={{display:'flex', flex:1, flexDirection:'row', justifyContent:'center'}}>
+          <NewsLetterButton />
         </div>
       </div>
     </Layout>
