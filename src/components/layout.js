@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 import useWindowSize from "./useWindow"
 
@@ -39,14 +40,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-      <footer style={{
-          marginTop:'auto', 
-          maxWidth: (wSize.width * .8), 
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0
-          }}>
-          Copyright © 2019 Meraki Wood Designs - All Rights Reserved.
-      </footer>
+      <Footer />
     </>
   )
 }

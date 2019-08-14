@@ -22,10 +22,6 @@ const IndexPage = () => {
           <br/> Please Stay Tuned! 
         </h4>
 
-        {/* <div style={{display:'flex', flex:1, flexDirection:'row'}}>
-          <NewsForm />
-        </div> */}
-
         <div style={{display:'flex', flex:1, flexDirection:'row'}}>
           <Divider split={true} />
             <h2 style={{fontFamily:`'Montserrat', sans-serif, light`}}>Featured Products</h2>
@@ -35,17 +31,11 @@ const IndexPage = () => {
           <p style={{fontFamily:`'Montserrat', sans-serif, light`}} align="center">New products are coming soon!</p>
         </div>
 
-        <div style={{display:'flex', flex:1, flexDirection:'row'}}>
+        {/* <div style={{display:'flex', flex:1, flexDirection:'row'}}>
           <Divider split={true} />
             <h2 style={{fontFamily:`'Montserrat', sans-serif, light`}}>Photo Gallery</h2>
           <Divider split={true} />
-        </div>
-
-        <div style={{display:'flex', flex:1, flexDirection:'row'}}>
-          <Divider split={true} />
-            <h2 style={{fontFamily:`'Montserrat', sans-serif, light`}}>Project Gallery</h2>
-          <Divider split={true} />
-        </div>
+        </div> */}
 
         <div style={{display:'flex', flex:1, flexDirection:'row', justifyContent:'center'}}>
           <NewsLetterButton />
