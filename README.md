@@ -2,7 +2,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6c44531c-786a-4299-85ce-71c52da1920d/deploy-status)](https://app.netlify.com/sites/hardcore-kepler-1c3995/deploys)
 
 <h1 align="center">
-  Merameraki Wood Designs
+  Meraki Wood Designs
 </h1>
 
 ## 🚀 Quick start
