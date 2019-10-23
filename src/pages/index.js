@@ -18,7 +18,7 @@ const IndexPage = () => {
         <p style={{fontFamily:`'Montserrat', sans-serif, light`}} align="center">WELCOME</p>
         <h4 style={{fontFamily:`'Montserrat', sans-serif, light`}} align="center">
           Thanks for stopping by! We are very excited to share what we are working on.
-          <br/> Meraki Wood Designs will be selling on Etsy soon! 
+          <br/>Check out Meraki Wood Designs on Etsy!
           <br/> Please Stay Tuned! 
         </h4>
 

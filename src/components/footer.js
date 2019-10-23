@@ -1,5 +1,6 @@
 import React from "react"
 import InstagramLogo from "../components/instagramLogo"
+import EtsyLogo from "../components/etsyLogo"
 import useWindowSize from "../components/useWindow"
 const Footer = () => {
     const wSize = useWindowSize()
@@ -58,6 +59,9 @@ const Footer = () => {
                     <p style={{fontSize:`12px`}}>Copyright © 2019 Meraki Wood Designs - All Rights Reserved.</p>
                 </div>
                 <div style={wSize.width > 600 || wSize.width == undefined ? styles.fItemLargeEnd : styles.fItemSmallStart}>
+                    <a style={{marginRight:3}} href="https://www.etsy.com/shop/MerakiWoodDesigns" target="_blank">
+                        <EtsyLogo />
+                    </a> 
                     <a href="https://www.instagram.com/merakiwooddesigns/" target="_blank">
                         <InstagramLogo />
                     </a> 

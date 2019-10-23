@@ -38,6 +38,21 @@ const Shop = () => (
                 sku {
                   text
                 }
+                linktoetsy {
+                  text
+                }
+                long_description {
+                  text
+                }
+                height {
+                  text
+                }
+                depth {
+                  text
+                }
+                width {
+                  text
+                }
               }
             }
           }
@@ -52,7 +67,12 @@ const Shop = () => (
             "name":p.node.data.display_name.text,
             "price": p.node.data.price.text,
             "description": p.node.data.description.text,
-            "imgSrc": p.node.data.image.url
+            "imgSrc": p.node.data.image.url,
+            "etsyLink": p.node.data.linktoetsy.text,
+            "long_description":p.node.data.long_description.text,
+            "height":p.node.data.height.text,
+            "depth":p.node.data.depth.text,
+            "width":p.node.data.width.text,
           }
           return(<Product key={p.node.id} productDetails={pDetails} />)
         })}

@@ -11,14 +11,17 @@ import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
     card: {
-      maxWidth: 345,
-      marginBottom:'15px'
+        display:'flex',
+        flexDirection:'column',
+        maxWidth: 345,
+        marginBottom:'15px',
+        justifyContent:'space-between',
     },
     media: {
         alignItems:'center'
     },
     cardActions:{
-        backgroundColor:`#F4EBDE`
+        backgroundColor:`#F4EBDE`,
     }
   });
 
@@ -26,12 +29,17 @@ const useStyles = makeStyles({
 function Product(props) {
     const p = props.productDetails
     const classes = useStyles();
-    function register(){
-        alert("You registered for " + p.sku)
+    function learnMore(){
+        
     }
     return (
         <Card className={classes.card}>
             <CardActionArea>
+                <CardContent>
+                    <Typography align='center' gutterBottom variant="h5" component="h2">
+                        {p.name}
+                    </Typography>
+                </CardContent>
                 <CardMedia 
                     className={classes.media}
                     title={p.name}>
@@ -40,19 +48,16 @@ function Product(props) {
                 {/* </div> */}
                 </CardMedia>
                 <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    {p.name}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                    {p.description}
-                </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {p.description}
+                    </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions disableSpacing={false} className={classes.cardActions}>
-                <Button size="small" onClick={register}>
+                <Button size="small" target="_blank" href={p.etsyLink}>
                     Check out on Etsy
                 </Button>
-                <Button size="small">
+                <Button size="small" onClick={()=>learnMore()}>
                     Learn More
                 </Button>
             </CardActions>
