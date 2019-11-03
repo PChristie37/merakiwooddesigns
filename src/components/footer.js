@@ -1,6 +1,6 @@
 import React from "react"
 import InstagramLogo from "../components/instagramLogo"
-import EtsyLogo from "../components/etsyLogo"
+import EtsyLogo from "../components/etsylogo"
 import useWindowSize from "../components/useWindow"
 const Footer = () => {
     const wSize = useWindowSize()
