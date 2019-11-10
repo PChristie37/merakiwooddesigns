@@ -1,17 +1,41 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Divider from "../components/styledDivider"
 import Product from "../components/product"
+import ProductDetails from "../components/productDetails"
 import {StaticQuery, graphql } from "gatsby"
 
-const Shop = () => (
+const Shop = () => {
+  const [learnMore, setLearnMore] = useState(false)
+  const [activeProduct, setAProduct] = useState(null)
+
+  function learnMoreProduct(pDetails){
+    setAProduct(pDetails)
+    setLearnMore(true)
+    console.log(pDetails)
+  }
+  
+  useEffect(() => {
+    if (learnMore === false) {
+      setAProduct(null)
+    } 
+  }, [activeProduct]);
+
+  return(
   <Layout>
     <SEO title="shop" description="Wood design craft products" />
     <div style={{display:'flex', flex:1, flexDirection:'row'}}>
       <Divider split={true} />
         <h2>Products</h2>
       <Divider split={true} />
+    </div>
+    <div>
+    {learnMore ? 
+      <ProductDetails open={learnMore} productDetails={activeProduct} closeDialog={()=>setLearnMore(false)}/>
+      :
+      null
+    }
     </div>
 
     <StaticQuery
@@ -35,9 +59,6 @@ const Shop = () => (
                 price {
                   text
                 }
-                sku {
-                  text
-                }
                 linktoetsy {
                   text
                 }
@@ -53,6 +74,9 @@ const Shop = () => (
                 width {
                   text
                 }
+                materials {
+                  text
+                }
               }
             }
           }
@@ -63,7 +87,7 @@ const Shop = () => (
         <div style={{display:'flex', flex: 1, flexDirection:'row', justifyContent:'space-between',flexWrap: 'wrap' }}>
         {data.allPrismicFullProduct.edges.map((p)=>{
           let pDetails = {
-            "sku":p.node.data.sku.text,
+            "materials":p.node.data.materials.text,
             "name":p.node.data.display_name.text,
             "price": p.node.data.price.text,
             "description": p.node.data.description.text,
@@ -74,12 +98,12 @@ const Shop = () => (
             "depth":p.node.data.depth.text,
             "width":p.node.data.width.text,
           }
-          return(<Product key={p.node.id} productDetails={pDetails} />)
+          return(<Product key={p.node.id} productDetails={pDetails} learnMore={() => learnMoreProduct(pDetails)} />)
         })}
         </div>
       )}
     />
   </Layout>
-)
+)}
 
 export default Shop

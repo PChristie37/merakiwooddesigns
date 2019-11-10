@@ -29,12 +29,9 @@ const useStyles = makeStyles({
 function Product(props) {
     const p = props.productDetails
     const classes = useStyles();
-    function learnMore(){
-        
-    }
     return (
         <Card className={classes.card}>
-            <CardActionArea>
+            <CardActionArea onClick={()=>props.learnMore()}>
                 <CardContent>
                     <Typography align='center' gutterBottom variant="h5" component="h2">
                         {p.name}
@@ -57,7 +54,7 @@ function Product(props) {
                 <Button size="small" target="_blank" href={p.etsyLink}>
                     Check out on Etsy
                 </Button>
-                <Button size="small" onClick={()=>learnMore()}>
+                <Button size="small" onClick={()=>props.learnMore()}>
                     Learn More
                 </Button>
             </CardActions>
